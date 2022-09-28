@@ -62,12 +62,13 @@ developing your own process.
 
 - Add a new toy when the toy form is submitted
 
-  - How I debugged:
+  - How I debugged: when I saw 505 Internal Server Error , on the console Network tab via the header tab, I was able to tell the error originated from the rails server API logs. I checked the error and saw where the error originated from the controller and the specific line of code.
 
 - Update the number of likes for a toy
 
-  - How I debugged:
+  - How I debugged: seeing Unexpected end of JSON input error, I knew the error message originated from the controller not sending a json response or from the fetch request on frontend. The error was on the update controller action which was not sending a json response.
 
 - Donate a toy to Goodwill (and delete it from our database)
 
-  - How I debugged:
+  - How I debugged:seeing 404 Not Found error message via the browser console(i.e the Header & Preview tabs), I knew the error message was to do with routes not having the path and the HTTP verb to handle the CRUD action. I checked the error via the rails server API logs in the backend and I saw routing error of a missing DELETE 
+route.
